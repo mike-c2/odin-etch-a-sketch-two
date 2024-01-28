@@ -8,5 +8,62 @@ html {
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.6rem;
+  background-color: rgb(69, 69, 69);
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightcoral;
+  height: 70rem;
+  width: 70rem;
+  border-radius: 3rem;
+}
+
+header,
+footer {
+  font-family: 'Chewy', system-ui;
+}
+
+header {
+  font-size: 6rem;
+  padding-top: 2rem;
+}
+
+#draw-container {
+  background-color: lightgray;
+  height: 50rem;
+  width: 50rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 4rem;
+  width: 30rem;
+  margin-bottom: 2rem;
+}
+
+#set-grid-size {
+  background-color: pink;
+  color: black;
+  font-size: 3rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+#set-grid-size:hover {
+  color: pink;
+  background-color: black;
 }
