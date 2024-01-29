@@ -21,6 +21,8 @@ function drawBoxes() {
     newBox.style.height = boxSize;
     newBox.style.backgroundColor = 'black';
     newBox.style.opacity = 0;
+    
+    newBox.addEventListener('mouseover', incrementOpacity);
 
     drawContainer.appendChild(newBox);
   }
