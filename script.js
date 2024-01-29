@@ -1,6 +1,15 @@
 const MIN_GRID_SIZE = 1;
 const MAX_GRID_SIZE = 100;
 
+function setGridSize() {
+  const gridSizeNumbers = document.querySelectorAll('.grid-size');
+  const newGridSize = getNewGridSize();
+
+  gridSizeNumbers.forEach(gridSize => {
+    gridSize.textContent = newGridSize;
+  });
+}
+
 function getNewGridSize() {
   let newGridSize;
 
