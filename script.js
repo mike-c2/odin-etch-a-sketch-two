@@ -9,6 +9,10 @@ function drawBoxes() {
   const drawContainer = document.getElementById('draw-container');
   const drawContainerSize = drawContainer.clientWidth;
 
+  while(drawContainer.firstChild) {
+    drawContainer.removeChild(drawContainer.firstChild);
+  }
+
   // Divide by 10 because 1rem === 10px
   const boxSize = (drawContainerSize / gridSize / 10) + 'rem';
   const numberOfBoxes = gridSize * gridSize;
