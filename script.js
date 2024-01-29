@@ -44,6 +44,12 @@ function incrementOpacity() {
   }
 }
 
+function addSetGridSizeEventListener() {
+  const setGridSizeButton = document.getElementById('set-grid-size');
+
+  setGridSizeButton.addEventListener('click', setGridSize);
+}
+
 function setGridSize() {
   const gridSizeNumbers = document.querySelectorAll('.grid-size');
   const newGridSize = getNewGridSize();
@@ -66,4 +72,5 @@ function getNewGridSize() {
   return newGridSize;
 }
 
+addSetGridSizeEventListener();
 drawBoxes();
