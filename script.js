@@ -51,6 +51,8 @@ function setGridSize() {
   gridSizeNumbers.forEach(gridSize => {
     gridSize.textContent = newGridSize;
   });
+
+  drawBoxes();
 }
 
 function getNewGridSize() {
