@@ -1,5 +1,6 @@
 const MIN_GRID_SIZE = 1;
 const MAX_GRID_SIZE = 100;
+const INCREMENT_OPACITY_SIZE = 0.5;
 
 function drawBoxes() {
   const gridSizeNumbers = document.querySelectorAll('.grid-size');
@@ -22,6 +23,18 @@ function drawBoxes() {
     newBox.style.opacity = 0;
 
     drawContainer.appendChild(newBox);
+  }
+}
+
+function incrementOpacity() {
+  let currentOpacity = +this.style.opacity;
+  
+  this.style.opacity = Math.min(currentOpacity + INCREMENT_OPACITY_SIZE, 1);
+
+  currentOpacity = +this.style.opacity;
+
+  if(currentOpacity === 1) {
+    this.removeEventListener('mouseover', incrementOpacity);
   }
 }
 
