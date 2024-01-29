@@ -38,6 +38,8 @@ header {
 }
 
 #draw-container {
+  display: flex;
+  flex-wrap: wrap;
   background-color: lightgray;
   height: 50rem;
   width: 50rem;
